@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Specialized</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<br>
+<br>
+  <ion-list lines="full">
+    <ion-item class="ion-text-center" color="primary" [routerLink]="['/allergists']"> 
+      <ion-label>Allergists</ion-label>
+    </ion-item>
+  
+    <ion-item class="ion-text-center" color="primary" [routerLink]="['/dermatologists']"> 
+      <ion-label>Dermatologists</ion-label>
+    </ion-item>
+
+    <ion-item class="ion-text-center" color="primary" [routerLink]="['/infectious']"> 
+      <ion-label>Infectious Disease Specialists</ion-label>
+    </ion-item>
+
+    <ion-item class="ion-text-center" color="primary" [routerLink]="['/cardiologists']"> 
+      <ion-label>Cardiologists</ion-label>
+    </ion-item>
+  
+    <ion-item class="ion-text-center" color="primary" [routerLink]="['/endocrinologists']">
+      <ion-label>Endocrinologists</ion-label>
+    </ion-item>
+  </ion-list>
+
+<br>
+<br>
+<ion-list lines="full">
+  <ion-item class="ion-text-center" color="primary" [routerLink]="['/specialized-about']"> 
+    <ion-label>About Specialized</ion-label>
+  </ion-item>
+
+  <ion-button class="ion-padding" expand="full" shape="round" color="light" [routerLink]="['/appointment']">
+    Make Appointment
+  </ion-button>
+  <br>
+</ion-list>

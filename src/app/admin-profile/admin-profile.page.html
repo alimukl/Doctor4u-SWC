@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Edit Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="profile">
+  <ion-card color="danger" no-margin>
+    <ion-card-content class="bg-profile">
+      <img src="assets/icon/admin-profile.png">
+      <h1 class="fw500"><strong>Mark Zurkerberg</strong></h1>
+      <h2 color="light" margin-bottom>Admin</h2>
+    </ion-card-content>
+  
+    <ion-grid fixed no-padding>
+      <ion-row>
+        <ion-col size="12" padding>
+
+          <ion-list margin-bottom>
+            <ion-list-header color="light">
+              <ion-label class="fw700">Information</ion-label>
+            </ion-list-header>
+
+            <ion-item>
+              <ion-label color="dark" position="stacked">Full Name:</ion-label>
+              <ion-input inputmode="text" value="Mark Zurkerberg"></ion-input>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label color="dark" position="stacked">Email:</ion-label>
+              <ion-input inputmode="email" value="MarkZurk@gmail.com"></ion-input>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label color="dark" position="stacked">Address:</ion-label>
+              <ion-input inputmode="text" value="Kuala Lumpur"></ion-input>
+            </ion-item>
+    
+          </ion-list>
+  
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+</ion-content>

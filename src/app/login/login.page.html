@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="primary">
+   <ion-title class="ion-text-center">WELCOME</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-row class="row-img" margin-top><img class="top-icon" src="assets/icon/doctor4ufull.jpg"></ion-row>
+
+
+<ion-content>
+  
+  <ion-item 
+  color="cecece">
+    <ion-label position="floating">E-mail</ion-label>
+    <ion-input type="email" [(ngModel)]="user.email" required></ion-input >
+  </ion-item>
+ 
+  <ion-item
+  color="cecece">
+    <ion-label position="floating">Password</ion-label>
+    <ion-input type="password" [(ngModel)]="user.password" required></ion-input >
+  </ion-item>
+ 
+  <ion-button class="ion-padding" expand="full" shape="round" color="primary" (click)="login(user)">
+    LOGIN
+  </ion-button>
+
+  <br>
+  <div class="ion-text-center">
+    <p>Don't have an account?&nbsp;<a [routerLink]="['/register']" >Sign Up</a></p>
+  </div>
+  <ion-button expand="full" color="light" [routerLink]="['/admin-login']">
+    <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+    ADMIN LOGIN
+  </ion-button>
+</ion-content>

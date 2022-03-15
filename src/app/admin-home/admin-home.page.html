@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>ADMIN PANEL
+    </ion-title>
+  <ion-icon name="log-out-outline" slot="end" size="large" [routerLink]="['/admin-login']"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <br>
+  <ion-item detail [routerLink]="['/admin-appointment']">
+    <ion-icon name="calendar-outline" slot="start" size="large" ></ion-icon>
+    <ion-label style="text-align: center;font-size: 20px;">
+      All Appointment
+    </ion-label>
+  </ion-item>
+  <br>
+
+  <br>
+  <ion-item detail [routerLink]="['/admin-patient']">
+    <ion-icon name="people-outline" slot="start" size="large" ></ion-icon>
+    <ion-label style="text-align: center;font-size: 20px;">
+      Patient
+    </ion-label>
+  </ion-item>
+  <br>
+
+  <br>
+  <ion-item detail [routerLink]="['/admin-profile']">
+    <ion-icon name="person-circle-outline" slot="start" size="large" ></ion-icon>
+    <ion-label style="text-align: center;font-size: 20px;">
+      Profile
+    </ion-label>
+  </ion-item>
+  <br>
+
+</ion-content>

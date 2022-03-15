@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar color="favorite">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Appointment</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+
+    <ion-text color="primary">
+      <p>Please fill up your appoinment information</p>
+    </ion-text>
+
+    <ion-item>
+      <ion-label position="floating">Patient Name</ion-label>
+      <ion-input type="text" [(ngModel)]="appointment.name" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" placeholder="your@gmail.com" [(ngModel)]="appointment.email" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Phone</ion-label>
+      <ion-input type="text" [(ngModel)]="appointment.number" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Choose Your Doctor</ion-label>
+      <ion-select value="General" okText="Okay" [(ngModel)]="appointment.doctor" cancelText="Dismiss">
+        <ion-select-option value="Dr.Jamal">Dr.Jamal</ion-select-option>
+        <ion-select-option value="Dr.Karmila">Dr.Karmila</ion-select-option>
+        <ion-select-option value="Dr.Johnson">Dr.Johnson</ion-select-option>
+        <ion-select-option value="Dr.Raju">Dr.Raju</ion-select-option>
+        <ion-select-option value="Dr.Adam">Dr.Adam</ion-select-option>
+        <ion-select-option value="Dr.Redzarif">Dr.Redzarif</ion-select-option>
+        <ion-select-option value="Dr.Damian">Dr.Damian</ion-select-option>
+        <ion-select-option value="Dr.Wong">Dr.Wong</ion-select-option>
+        <ion-select-option value="Dr.Daniel">Dr.Daniel</ion-select-option>
+        <ion-select-option value="Dr.Yung">Dr.Yung</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Notes</ion-label>
+      <ion-input [(ngModel)]="appointment.notes"></ion-input>
+    </ion-item>
+
+
+    <ion-item class="roundedInput">
+      <ion-label position="floating">Date</ion-label><br>
+      <ion-input type="date" [(ngModel)]="appointment.date" required></ion-input>
+    </ion-item>
+    <br>
+    <ion-item class="roundedInput">
+      <ion-label position="floating">Time</ion-label><br>
+      <ion-input type="time" [(ngModel)]="appointment.time" required></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" color="primary" (click)="createAppointment(appointment)">
+      <ion-icon slot="start" name="send"></ion-icon>
+      submit
+    </ion-button>
+   </div>
+
+   
+</ion-content>

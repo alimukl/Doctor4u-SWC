@@ -1,0 +1,34 @@
+<ion-header style="color: rgb(255, 255, 255);" color="danger">
+  <ion-toolbar>
+   <ion-title class="ion-text-center">HELLO ADMIN</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-row class="row-img" margin-top><img class="top-icon" src="assets/icon/admin-panel.png"></ion-row>
+
+
+<ion-content>
+  
+  <ion-item 
+  color="cecece">
+    <ion-label position="floating">Username</ion-label>
+    <ion-input type="email" [(ngModel)]="admin.username" required></ion-input >
+  </ion-item>
+ 
+  <ion-item
+  color="cecece">
+    <ion-label position="floating">Password</ion-label>
+    <ion-input type="password" [(ngModel)]="admin.password" required></ion-input >
+  </ion-item>
+ 
+  <ion-button class="ion-padding" expand="full" shape="round" color="danger" (click)="loginAdmin(admin)">
+    LOGIN
+  </ion-button>
+
+  <br>
+  
+  <ion-button expand="full" color="light" [routerLink]="['/login']">
+    <ion-icon name="person-outline" slot="start"></ion-icon>
+    USER LOGIN
+  </ion-button>
+</ion-content>

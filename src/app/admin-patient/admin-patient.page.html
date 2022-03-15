@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="danger">
+    <ion-title>List Patient</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+<ion-fab vertical="bottom" horizontol="end" slot="fixed">
+  <ion-fab-button [routerLink]="['/add-patient']" color="danger">
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+  <ion-list lines="none">
+    <ion-item-sliding *ngFor="let post of posts">
+    <ion-item class="no-padding">
+      <ion-item-divider>
+      <ion-label>
+        <br>
+          <h1><strong>{{ post.name}}</strong></h1>
+          <h3><strong> Email : </strong>{{ post.email }}</h3>
+          <h3><strong> Phone : </strong>{{ post.phone }}</h3>
+          <h3><strong> Address: </strong>{{ post.address }}</h3>
+          <br>
+      </ion-label>
+    </ion-item-divider>
+    </ion-item>
+
+    <ion-item-options side="start">
+      <ion-item-option color="primary" [routerLink]="['/edit-patient', post.id]">
+        <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
+      </ion-item-option>
+    </ion-item-options>
+
+    <ion-item-options side="end">
+      <ion-item-option color="danger" (click)="deletePost(post.id)">
+        <ion-icon slot="icon-only" name="trash"></ion-icon>
+      </ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+</ion-list>
+
+
+</ion-content>

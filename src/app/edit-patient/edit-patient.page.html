@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="primary" class="ion-text-center" color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Edit Patient</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content>
+
+  <ion-item>
+    <ion-label position="floating">Name</ion-label>
+    <ion-input type="text" [(ngModel)]="post.name" required></ion-input >
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">E-mail</ion-label>
+    <ion-input type="email" [(ngModel)]="post.email" required></ion-input >
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Phone</ion-label>
+    <ion-input type="text" [(ngModel)]="post.phone" required></ion-input >
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Address</ion-label>
+    <ion-input type="text" [(ngModel)]="post.address" required></ion-input >
+  </ion-item>
+
+  <ion-button expand="block" color="primary" (click)="updatePost(post)">
+    <ion-icon slot="start" name="send"></ion-icon>
+    Update
+  </ion-button>
+
+
+  
+</ion-content>

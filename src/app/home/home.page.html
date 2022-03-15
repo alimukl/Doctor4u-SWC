@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center">
+    <br>
+    <ion-row class="row-img" margin-top><img class="top-icon" src="assets/icon/doctor4u_header.png"></ion-row>
+    <br>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="grid">
+
+    <br>
+
+    <ion-row class="row1" [routerLink]="['/category']">
+      <ion-col size="4">
+        <div><ion-img class="img2" width="80" height="80" src="assets/icon/appointment.jpg"></ion-img></div>
+      </ion-col>
+
+    <br>
+
+      <ion-col size="7">
+        <div class="ion-text-center"><h1><strong>Appointment</strong></h1></div>
+      </ion-col>
+    </ion-row>
+
+    <br>
+
+    <ion-row class="rowHT">
+      <ion-col>
+        <div><h2 class="ion-text-center">HEALTH DETAILS</h2></div>
+      </ion-col>
+    </ion-row>
+
+    <br>
+
+    <ion-row class="row2" [routerLink]="['/bmi']">
+      <ion-col size="4">
+        <div><ion-img class="img2" width="80" height="80" src="assets/icon/scale.jpg"></ion-img></div>
+      </ion-col>
+      <ion-col size="7">
+
+        <div><h3 class="ion-text-center"><strong>BMI Information</strong></h3></div>
+      </ion-col>
+    </ion-row>
+
+    <br>
+
+    <ion-row class="row3" [routerLink]="['/pregnant']">
+      <ion-col size="4">
+        <div><ion-img class="img2" width="80" height="80" src="assets/icon/pregnant.jpg"></ion-img></div>
+      </ion-col>
+      <ion-col size="7">
+        <div><h3 class="ion-text-center"><strong>Pregnancy</strong></h3></div>
+      </ion-col>
+    </ion-row>
+
+    <br>
+
+    <ion-row class="row4" [routerLink]="['/ovulation-calender']">
+      <ion-col size="4">
+        <div><ion-img class="img2" width="80" height="80" src="assets/icon/ovulation-calender.png"></ion-img></div>
+      </ion-col>
+      <ion-col size="7">
+        <div><h3 class="ion-text-center"><strong>Ovulation  Schedule</strong></h3></div>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>
